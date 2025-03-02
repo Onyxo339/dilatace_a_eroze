@@ -7,10 +7,14 @@ def dil(image2d):
     for i in range(height):
         for j in range(width):
             neighbors = [image2d[i][j]]
-            if i > 0: neighbors.append(image2d[i-1][j]) 
-            if i < height-1: neighbors.append(image2d[i+1][j])  
-            if j > 0: neighbors.append(image2d[i][j-1])  
-            if j < width-1: neighbors.append(image2d[i][j+1])  
+            if i > 0: 
+                neighbors.append(image2d[i-1][j]) 
+            if i < height-1: 
+                neighbors.append(image2d[i+1][j])  
+            if j > 0: 
+                neighbors.append(image2d[i][j-1])  
+            if j < width-1: 
+                neighbors.append(image2d[i][j+1])  
 
             new_image[i][j] = max(neighbors)  
 
@@ -23,10 +27,14 @@ def er(image2d):
     for i in range(height):
         for j in range(width):
             neighbors = [image2d[i][j]]
-            if i > 0: neighbors.append(image2d[i-1][j])  
-            if i < height-1: neighbors.append(image2d[i+1][j])  
-            if j > 0: neighbors.append(image2d[i][j-1]) 
-            if j < width-1: neighbors.append(image2d[i][j+1])  
+            if i > 0: 
+                neighbors.append(image2d[i-1][j])  
+            if i < height-1: 
+                neighbors.append(image2d[i+1][j])  
+            if j > 0: 
+                neighbors.append(image2d[i][j-1]) 
+            if j < width-1: 
+                neighbors.append(image2d[i][j+1])  
 
             new_image[i][j] = min(neighbors)  
 
