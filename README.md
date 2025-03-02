@@ -90,3 +90,19 @@ def er(image2d):
 
     return new_image
 ```
+- Jako poslední vytvořím 3 for loopy pro zobrayení originálního pole, po dilataci a po erozi
+```
+print("Original:")
+for row in image2d:
+    print(row)
+
+print("Dilatace:")
+dilated = dil(image2d)
+for row in dilated:
+    print(row)
+
+print("Eroze:")
+eroded = er(image2d)
+for row in eroded:
+    print(row)
+```
