@@ -38,4 +38,7 @@ Finální output:
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Kód_na_implementaci_operací
-- 
+- Vytvářim funkci, kde na vstupu je image2d
+```
+def dil(image2d):
+```
