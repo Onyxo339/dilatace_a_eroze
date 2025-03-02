@@ -1,6 +1,7 @@
 # dilatace_a_eroze
 
 - Generace md tabulky ze zadaného vstupu
+- Změna čísla podle okolních čísel
 
 ## Kód_na_md_tabulku
 - Vytvořil jsem funkci, která má zadaný field.
