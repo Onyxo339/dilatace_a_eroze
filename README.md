@@ -1,6 +1,8 @@
 # dilatace_a_eroze_md
 
 - Generace md tabulky ze zadaného vstupu
+- Odkaz na kod:
+  https://github.com/Onyxo339/dilatace_a_eroze/blob/main/README.md
 
 ## Kód_na_md_tabulku
 - Vytvořil jsem funkci, která má zadaný field.
