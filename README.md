@@ -13,6 +13,11 @@ def md_2d(field):
     md = "| " + " | ".join(str(i) for i in field[0]) + " |" + "\n"
     md += "|---" * len(field) + "|" + "\n"
 ```
+- Dále projíždím řádky 2d pole, měním na string a spojuji s " | ".
+```
+for row in field[1:]:
+        md += "| " + " | ".join(str(cell) for cell in row) + " |" + "\n"
+```
 
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |---|---|---|---|---|---|---|---|---|
