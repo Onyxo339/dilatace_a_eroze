@@ -2,7 +2,7 @@ image2d = [[4 - max(abs(i - 4), abs(j - 4)) for j in range(9)] for i in range(9)
 
 def dil(image2d):
     height = len(image2d)
-    width = len(image2d[0])
+    width = len(image2d)
     new_image = [[0] * width for _ in range(height)]
 
     for i in range(height):
