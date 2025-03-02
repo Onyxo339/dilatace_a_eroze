@@ -38,7 +38,55 @@ Finální output:
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Kód_na_implementaci_operací
-- Vytvářim funkci, kde na vstupu je image2d
+- Vytvářim funkci pro dilataci, kde na vstupu je image2d.
 ```
 def dil(image2d):
+```
+- Vytvořim novou matici pod jménem new_image, abych ukládal updatované hodnoty.
+```
+new_image = [[0] * width for _ in range(height)]
+```
+- Dále použiju for loop pro projetí jak sloupců tak řádků.
+- If statementy zjištují zda je nalevo, napravo, nahoře nebo dole hodnota.
+- Pokud ano tak zjistím jaké je na pozici číslo a uložím ho.
+- Nakonec vracím největší hodnotu co jsem našel
+```
+for i in range(height):
+        for j in range(width):
+            neighbors = [image2d[i][j]]
+            if i > 0: 
+                neighbors.append(image2d[i-1][j]) 
+            if i < height-1: 
+                neighbors.append(image2d[i+1][j])  
+            if j > 0: 
+                neighbors.append(image2d[i][j-1])  
+            if j < width-1: 
+                neighbors.append(image2d[i][j+1])  
+
+            new_image[i][j] = max(neighbors)
+
+return new_image
+```
+- Dále dělám udělám celý proces znovu jen vrátím nejmenší hodnotu.
+```
+def er(image2d):
+    height = len(image2d)
+    width = len(image2d)
+    new_image = [[0] * width for _ in range(height)]
+
+    for i in range(height):
+        for j in range(width):
+            neighbors = [image2d[i][j]]
+            if i > 0: 
+                neighbors.append(image2d[i-1][j])  
+            if i < height-1: 
+                neighbors.append(image2d[i+1][j])  
+            if j > 0: 
+                neighbors.append(image2d[i][j-1]) 
+            if j < width-1: 
+                neighbors.append(image2d[i][j+1])  
+
+            new_image[i][j] = min(neighbors)  
+
+    return new_image
 ```
