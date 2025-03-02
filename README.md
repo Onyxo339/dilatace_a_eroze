@@ -1,4 +1,4 @@
-# dilatace_a_eroze_md
+# dilatace_a_eroze
 
 - Generace md tabulky ze zadaného vstupu
 
