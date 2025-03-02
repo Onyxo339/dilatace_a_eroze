@@ -4,6 +4,9 @@
 
 ## Kód_na_md_tabulku
 - Vytvořil jsem funkci, která má zadaný field.
+```
+def md_2d(field):
+```
 - Dále jsem udělala, že vezmu první řádek změním každý element na string a spojím je s " | ".
 - Jako další jsem přidal "|---" podle počtu sloupců pro vytvoření kompletní tabulky.
 ```
