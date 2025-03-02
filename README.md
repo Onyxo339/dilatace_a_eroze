@@ -18,6 +18,12 @@ def md_2d(field):
 for row in field[1:]:
         md += "| " + " | ".join(str(cell) for cell in row) + " |" + "\n"
 ```
+- Jako poslední dávám na vstup funkce předpřipravení list image2d a vypisuji ho.
+```
+markdown_table = md_2d(image2d)
+print(markdown_table)
+```
+Finální output:
 
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |---|---|---|---|---|---|---|---|---|
