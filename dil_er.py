@@ -22,7 +22,8 @@ def dil(image2d):
     return new_image
 
 def er(image2d):
-    height, width = len(image2d), len(image2d[0])
+    height = len(image2d)
+    width = len(image2d)
     new_image = [[0] * width for _ in range(height)]
 
     for i in range(height):
