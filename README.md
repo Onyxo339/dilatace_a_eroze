@@ -4,8 +4,12 @@
 
 ## Kód_na_md_tabulku
 - Vytvořil jsem funkci, která má zadaný field.
-- Dále jsem udělala, že vezmu první řádek změním každý element na string a spojím je s " | "
-- 
+- Dále jsem udělala, že vezmu první řádek změním každý element na string a spojím je s " | ".
+- Jako další jsem přidal "|---" podle počtu sloupců pro vytvoření kompletní tabulky.
+```
+    md = "| " + " | ".join(str(i) for i in field[0]) + " |" + "\n"
+    md += "|---" * len(field) + "|" + "\n"
+```
 
 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 |---|---|---|---|---|---|---|---|---|
