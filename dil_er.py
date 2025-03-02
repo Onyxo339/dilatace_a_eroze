@@ -7,12 +7,12 @@ def dil(image2d):
     for i in range(height):
         for j in range(width):
             neighbors = [image2d[i][j]]
-            if i > 0: neighbors.append(image2d[i-1][j])  # Top
-            if i < height-1: neighbors.append(image2d[i+1][j])  # Bottom
-            if j > 0: neighbors.append(image2d[i][j-1])  # Left
-            if j < width-1: neighbors.append(image2d[i][j+1])  # Right
+            if i > 0: neighbors.append(image2d[i-1][j]) 
+            if i < height-1: neighbors.append(image2d[i+1][j])  
+            if j > 0: neighbors.append(image2d[i][j-1])  
+            if j < width-1: neighbors.append(image2d[i][j+1])  
 
-            new_image[i][j] = max(neighbors)  # Dilation uses max
+            new_image[i][j] = max(neighbors)  
 
     return new_image
 
@@ -23,12 +23,12 @@ def er(image2d):
     for i in range(height):
         for j in range(width):
             neighbors = [image2d[i][j]]
-            if i > 0: neighbors.append(image2d[i-1][j])  # Top
-            if i < height-1: neighbors.append(image2d[i+1][j])  # Bottom
-            if j > 0: neighbors.append(image2d[i][j-1])  # Left
-            if j < width-1: neighbors.append(image2d[i][j+1])  # Right
+            if i > 0: neighbors.append(image2d[i-1][j])  
+            if i < height-1: neighbors.append(image2d[i+1][j])  
+            if j > 0: neighbors.append(image2d[i][j-1]) 
+            if j < width-1: neighbors.append(image2d[i][j+1])  
 
-            new_image[i][j] = min(neighbors)  # Erosion uses min
+            new_image[i][j] = min(neighbors)  
 
     return new_image
 
