@@ -49,7 +49,7 @@ new_image = [[0] * width for _ in range(height)]
 - Dále použiju for loop pro projetí jak sloupců tak řádků.
 - If statementy zjištují zda je nalevo, napravo, nahoře nebo dole hodnota.
 - Pokud ano tak zjistím jaké je na pozici číslo a uložím ho.
-- Nakonec vracím největší hodnotu co jsem našel
+- Nakonec vracím největší hodnotu co jsem našel.
 ```
 for i in range(height):
         for j in range(width):
@@ -90,7 +90,7 @@ def er(image2d):
 
     return new_image
 ```
-- Jako poslední vytvořím 3 for loopy pro zobrayení originálního pole, po dilataci a po erozi
+- Jako poslední vytvořím 3 for loopy pro zobrazení originálního pole, po dilataci a po erozi.
 ```
 print("Original:")
 for row in image2d:
